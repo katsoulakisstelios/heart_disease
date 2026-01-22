@@ -19,19 +19,27 @@ The dataset contains patient information such as age, cholesterol, chest pain ty
 
 ## ⚙️ Project Workflow
 
-1. **Data Splitting**
+1. **Exploratory Data Analysis (EDA)**
+
+   * Inspected dataset structure and data types
+   * Analyzed class distribution of the target variable
+   * Visualized feature distributions and relationships
+   * Identified potential patterns, trends, and anomalies
+   * Gained domain insights to guide preprocessing and modeling
+
+2. **Data Splitting**
 
    * Train–test split (80% / 20%)
    * Stratified sampling to preserve class balance
    * Test data kept completely unseen during training
 
-2. **Feature Scaling**
+3. **Feature Scaling**
 
    * Applied **StandardScaler**
    * Scaling performed **after** train–test split to avoid data leakage
    * Required for distance-based and margin-based models (KNN, SVM, Logistic Regression)
 
-3. **Model Training**
+4. **Model Training**
    Six machine learning models were trained and evaluated:
 
    * Logistic Regression (baseline)
@@ -41,7 +49,7 @@ The dataset contains patient information such as age, cholesterol, chest pain ty
    * Support Vector Machine (SVM)
    * K-Nearest Neighbors (KNN)
 
-4. **Model Evaluation**
+5. **Model Evaluation**
    Performance was evaluated using:
 
    * Confusion Matrix
@@ -50,12 +58,12 @@ The dataset contains patient information such as age, cholesterol, chest pain ty
    * Recall (Sensitivity)
    * **F1-Score** (primary metric due to medical importance of false negatives)
 
-5. **Cross-Validation**
+6. **Cross-Validation**
 
    * K-Fold Cross-Validation for robust performance estimation
    * Reduced variance caused by a single train–test split
 
-6. **Hyperparameter Tuning**
+7. **Hyperparameter Tuning**
 
    * GridSearchCV applied to the **top 3 models**
    * Tuned models:
@@ -65,7 +73,6 @@ The dataset contains patient information such as age, cholesterol, chest pain ty
      * KNN
    * Selection based on cross-validated F1-score
 
----
 
 ## 🏆 Results
 
